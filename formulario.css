@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estrutura da página com flex layout */
+body, html {
+  height: 100%;
+  background-color: #c3cde1;
+  color: #003366;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Imagem + título + nav em coluna */
+  background-color: #005ea2;
+  padding: 20px;
+  color: white;
+}
+
+header .nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .nav img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;    /* Deixa a imagem redonda */
+  object-fit: cover;     /* Cobre sem distorcer o rosto da imagem */ 
+  /* border-radius:50% é a técnica padrão para circular imagens :contentReference[oaicite:1]{index=1} */
+}
+header .nav h1 img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+header .nav h1 {
+  font-size: 2rem;
+}
+
+/* Barra de navegação abaixo */
+header nav {
+  margin-top: 15px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 7px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-list a:hover {
+  background: white;
+  color: #005ea2;
+  border-radius: 4px;
+}
+
+
+/* Conteúdo principal – formulário */
+.form-container {
+  flex: 1; /* ocupa espaço central */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+
+.form-container form {
+  background-color: #c3cde1;
+  color: #003366;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #003366;
+}
+
+/* Rodapé */
+/* Footer */
+footer {
+  background: #005ea2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+footer p {
+  font-size: 0.85rem;
+}
